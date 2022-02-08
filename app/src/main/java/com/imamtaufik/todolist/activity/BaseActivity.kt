@@ -1,4 +1,4 @@
-package com.imamtaufik.todolist
+package com.imamtaufik.todolist.activity
 
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
