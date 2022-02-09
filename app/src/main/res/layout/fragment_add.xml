@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.AddFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AddFragment"
+    android:padding="20dp"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
+   <EditText
+       android:id="@+id/edit_task"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Tugas"
+       android:drawableStart="@drawable/ic_task"
+       android:drawableTint="@android:color/darker_gray"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
     <TextView
+        android:id="@+id/label_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atur Tanggal"
+        android:textColor="@color/teal_200"
+        android:gravity="start|center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_task"
+        app:drawableStartCompat="@drawable/ic_date" />
+    <TextView
+        android:id="@+id/text_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="01/01/2022"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_task" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/material_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tambahkan"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/teal_200"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_tanggal" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
